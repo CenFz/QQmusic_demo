@@ -1,0 +1,44 @@
+@import url(com.css);
+
+#top {
+    width: 1050px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.top_logo {
+    background: url(../images/frame_logo@2x.png) no-repeat;
+    background-size: 295px 113px;
+    width: 295px ;
+    height: 113px;
+    margin: 0;
+    position: absolute;
+    left: -114px;
+    top: 0;
+
+}
+.top_logo .img_logo {
+    opacity: 0;
+}
+.top_logo .logo {
+    display: block;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    left: 150px;
+}
+/*main*/
+#main_page {
+    width: 1050px;
+    height: 626px;
+    margin: 20px auto 0;
+}
+.left_main {
+    width: 200px;
+
+}
+.right_main {
+    width: 850px;
+}

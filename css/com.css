@@ -1,0 +1,26 @@
+/*清浮动*/
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+/*通用*/
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: Arial,Tahoma,"hiragino sans gb",Helvetica;
+}
+a {
+    text-decoration: underline;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
