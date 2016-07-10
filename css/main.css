@@ -34,11 +34,138 @@
     width: 1050px;
     height: 626px;
     margin: 20px auto 0;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
-.left_main {
-    width: 200px;
-
+.left_area {
+    width: 199px;
+    border-right: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.3);
 }
-.right_main {
+.right_area {
     width: 850px;
+}
+/*左头*/
+.left_top {
+    height: 90px;
+    background-color: transparent;
+    text-align: center;
+    padding: 45px 0 15px;
+    border-bottom: 1px solod #dce4e8;
+}
+.left_top .lhead {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50%;
+}
+.left_top i {
+    display: block;
+    height: 25px;
+    background: url(../images/svip.png) center center no-repeat;
+}
+/*左身*/
+.left_nav {
+    height: 416px;
+    overflow: scroll;
+    background-color: transparent;
+}
+.left_nav .navBox {
+    padding:10px;
+}
+.left_nav .navBox dt {
+    padding: 5px 0;
+    color: #999;
+}
+.left_nav .navBox dd {
+    line-height: 25px;
+    font-size: 14px;
+}
+/*底部*/
+.left_footer  {
+    background-color: #f3f3f6;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+.left_footer .medium {
+    font-size: 24px;
+}
+.left_footer .big {
+    font-size: 26px;
+}
+/*右边部分*/
+.right_top {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #999;
+}
+.top_search {
+}
+.searchBox {
+    position: relative;
+}
+.searchBox input {
+    border: none;
+    border-radius: 10px;
+    width: 240px;
+    height: 20px;
+    background: url(../images/pos.png) 90px center no-repeat;
+    background-size: 15px 15px;
+    text-indent: 106px;
+    background-color: #eaeaea;
+}
+/*.searchBox label {
+    position: absolute;
+    top: 0;
+    left: 136px;
+    color: #707070;
+}*/
+.searchBox input:focus {
+    background-position: 5px;
+    text-indent: 25px;
+}
+.top_search i {
+    //display: block;
+    width: 40px;
+}
+/*主体部分*/
+.ppt {
+    height: 255px;
+    width: 800px;
+    position: relative;
+    margin: 0 auto;
+}
+.ppt .poster_list {
+    height: 255px;
+    width: 800px;
+}
+.ppt .slide_prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 137px;
+    height: 210px;
+}
+.ppt .slide_next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 137px;
+    height: 210px;
+}
+.poster_list li img {
+    width: 525px;
+    height: 210px;
+}
+.poster_list a, .poster_list img {
+    display: block;
+}
+.poster_list .poster_item {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

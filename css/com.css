@@ -9,18 +9,28 @@
 }
 
 /*通用*/
-body {
+* {
+	padding: 0;
+	margin: 0;
+}
+body, dl,dt,dd,ol,ul,li {
     padding: 0;
     margin: 0;
     font-size: 12px;
     font-family: Arial,Tahoma,"hiragino sans gb",Helvetica;
 }
+ul, li {
+	list-style: none;
+}
 a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .fl {
     float: left;
 }
 .fr {
     float: right;
+}
+.hide {
+	display: none;
 }
