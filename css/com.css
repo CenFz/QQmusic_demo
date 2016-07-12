@@ -24,6 +24,7 @@ ul, li {
 }
 a {
     text-decoration: none;
+	color: #333;
 }
 .fl {
     float: left;
@@ -33,4 +34,7 @@ a {
 }
 .hide {
 	display: none;
+}
+img {
+	border: 0 none;
 }
