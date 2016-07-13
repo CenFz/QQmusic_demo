@@ -24,49 +24,56 @@
                     <img class="lhead" src="images/back.jpg" alt="" />
                     <a href="#">Cent</a>
                     <i></i>
+                    <div></div>
                 </div>
                 <div class="left_nav">
                     <dl class="navBox">
                         <dt>音乐馆</dt>
-                        <dd><i class="iconfont">&#xe617;</i> 精选</dd>
-                        <dd><i class="iconfont">&#xe637;</i> 排行</dd>
-                        <dd><i class="iconfont">&#xe663;</i> 歌单</dd>
-                        <dd><i class="iconfont">&#xe708;</i> 电台</dd>
+                        <dd><a href="#" class="action"><i class="iconfont">&#xe617;</i> 精选</a></dd>
+                        <dd><a><i class="iconfont">&#xe637;</i> 排行</a></dd>
+                        <dd><a><i class="iconfont">&#xe663;</i> 歌单</a></dd>
+                        <dd><a><i class="iconfont">&#xe708;</i> 电台</a></dd>
                     </dl>
                     <dl class="navBox">
                         <dt>我的音乐</dt>
-                        <dd><i class="iconfont">&#xe64e;</i> 我喜欢</dd>
-                        <dd><i class="iconfont">&#xe635;</i> 下载歌曲</dd>
-                        <dd><i class="iconfont">&#xe658;</i> 历史播放</dd>
+                        <dd><a><i class="iconfont">&#xe64e;</i> 我喜欢</a></dd>
+                        <dd><a><i class="iconfont">&#xe635;</i> 下载歌曲</a></dd>
+                        <dd><a><i class="iconfont">&#xe658;</i> 历史播放</a></dd>
                     </dl>
-                    <dl class="navBox clearfix">
-                        <dt>创建的歌单<i class="iconfont fr">&#xe66b;</i></dt>
-                        <dd><i class="">·</i> 我最喜欢</dd>
-                        <dd><i class="">·</i> 默认列表</dd>
+                    <dl class="navBox list_add">
+                        <dt>创建的歌单<a class="add_songs"></a></dt>
+                        <dd><a><i class="">·</i> 我最喜欢</a></dd>
+                        <dd><a><i class="">·</i> 默认列表</a></dd>
                     </dl>
                     <dl class="navBox">
                         <dt>收藏的歌单<i></i></dt>
                     </dl>
                 </div>
-                <div class="left_footer clearfix">
-                    <i class="iconfont medium">&#xe6de;</i>
-                    <i class="iconfont big">&#xf0079;</i>
-                    <i class="iconfont medium">&#xe6dd;</i>
-                    <i class="iconfont fr">&#xf002f;</i>
-                    <i class="iconfont fr">&#xe612;</i>
+                <div class="left_footer">
+                    <div class="m_play_controls">
+                        <a class="m_play_btn prev" title="上一首"></a>
+                        <a class="m_play_btn ctrl-play" title="暂停"></a>
+                        <a class="m_play_btn next" title="下一首"></a>
+                        <a class="m_play_btn volume" title="音量"></a>
+                        <a class="m_play_btn mode" title="循环模式"></a>
+                    </div>
                 </div>
             </div>
             <div class="right_area fr">
                 <div class="right_top clearfix">
                     <div class="top_search">
-                        <i class="iconfont fl">&#xe621;</i>
-                        <i class="iconfont fl">&#xe622;</i>
-                        <form class="searchBox fl" action="#" method="get">
+                        <a class="search_prve_btn"></a>
+                        <a class="search_next_btn"></a>
+                        <!--<i class="iconfont fl">&#xe621;</i>
+                        <i class="iconfont fl">&#xe622;</i>-->
+                        <form class="searchBox" action="#" method="get">
                             <input type="text" name="name" placeholder="搜索">
                             <label class="hide" for="q">搜索</label>
                         </form>
-                        <i class="iconfont fr">&#xe65a;</i>
-                        <i class="iconfont fr">&#xe64b;</i>
+                        <a class="Set_up"></a>
+                        <a class="streamline"></a>
+                        <!--<i class="iconfont fr">&#xe65a;</i>
+                        <i class="iconfont fr">&#xe64b;</i>-->
                     </div>
                 </div>
                 <div class="right_main">
@@ -145,87 +152,89 @@
                                     <a href="javascript:;" class="prve_btn">回退</a>
                                     <a href="javascript:;" class="next_btn">前进</a>
                                 </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>冲破</p>
-                                        <i></i>
-                                        <a href="#">谢霆锋</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing2.png" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>相爱恨早 (《致青春》电视剧片尾曲)</p>
-                                        <i></i>
-                                        <a href="#">那英</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing1.png" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>五环之歌 (Live)</p>
-                                        <i></i>
-                                        <a href="#">吴莫愁</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing3.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>七月第十二天</p>
-                                        <i></i>
-                                        <a href="#">季秋洋</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing4.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>单身情歌 (Live)</p>
-                                        <i></i>
-                                        <a href="#">小沈阳</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing5.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>还魂门 (《老九门》电视剧主题曲)</p>
-                                        <i></i>
-                                        <a href="#">胡彦斌</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing6.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>最差不过是孤独</p>
-                                        <i></i>
-                                        <a href="#">赖伟锋</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing7.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>我门 (《老九门》电视剧主题曲)</p>
-                                        <i></i>
-                                        <a href="#">陈伟霆</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
-                                <div class="newSing_info">
-                                    <a href="#"><img src="images/newsing8.jpg" alt="" /></a>
-                                    <div class="newSing_text">
-                                        <p>我好像在哪见过你</p>
-                                        <i></i>
-                                        <a href="#">薛之谦</a>
-                                        <label for="">遮罩</label>
-                                    </div>
-                                </div>
+                                <ul class="newSing_info">
+                                    <li>
+                                        <a href="#"><img src="images/newsing.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>冲破</p>
+                                            <i></i>
+                                            <a href="#">谢霆锋</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing2.png" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>相爱恨早 (《致青春》电视剧片尾曲)</p>
+                                            <i></i>
+                                            <a href="#">那英</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing1.png" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>五环之歌 (Live)</p>
+                                            <i></i>
+                                            <a href="#">吴莫愁</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing3.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>七月第十二天</p>
+                                            <i></i>
+                                            <a href="#">季秋洋</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing4.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>单身情歌 (Live)</p>
+                                            <i></i>
+                                            <a href="#">小沈阳</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing5.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>还魂门 (《老九门》电视剧主题曲)</p>
+                                            <i></i>
+                                            <a href="#">胡彦斌</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing6.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>最差不过是孤独</p>
+                                            <i></i>
+                                            <a href="#">赖伟锋</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing7.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>我门 (《老九门》电视剧主题曲)</p>
+                                            <i></i>
+                                            <a href="#">陈伟霆</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/newsing8.jpg" alt="" /></a>
+                                        <div class="newSing_text">
+                                            <p>我好像在哪见过你</p>
+                                            <i></i>
+                                            <a href="#">薛之谦</a>
+                                            <label for="">遮罩</label>
+                                        </div>
+                                    </li>
+                                </ul>
 
                             </div>
                         </div>
@@ -384,8 +393,44 @@
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="right_footer clearfix">
+                    <div class="wrap" id="g_player">
+                        <div class="head">
+                            <img src="images/newsing8.jpg" alt="" />
+                            <a href="#" class="mask"></a>
+                        </div>
+                        <div class="play">
+                            <div class="words">
+                                <a class="song" href="#">歌曲名称</a>
+                                <span><a href="#">-歌手</a></span>
+                                <span class="time"><em>00:00</em>/00:00 </span>
+                            </div>
+                            <div class="m-pbar">
+                                <div class="barbg">
+                                    <div class="rdy"></div>
+                                    <div class="cur">
+                                        <span class="cur_thumb"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down">
+                            <a href="#" class="love">最喜欢</a>
+                            <a href="#" class="download">下载</a>
+                        </div>
+                        <div class="other">
+                            <a href="#" class="more">更多</a>
+                            <a href="#" class="quality">标准 v</a>
+                            <a href="#" class="Sound">音效</a>
+                            <a href="#" class="Lyric">词</a>
+                            <a href="#" class="Playlist">播放列表</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </main>
         <script>
             $(function(){
