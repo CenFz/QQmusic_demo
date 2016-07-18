@@ -45,7 +45,7 @@
 }
 .right_area {
     width: 850px;
-
+    position: relative;
 }
 /*左头*/
 .left_top {
@@ -69,17 +69,148 @@
     height: 25px;
     background: url(../images/svip.png) center center no-repeat;
 }
-.left_top div {
+.left_top .slideLine {
     border-bottom: 1px solid #dce4e8;
     width: 80%;
     position: absolute;
     left: 10%;
     bottom: 0;
 }
+
+.left_top .user_info {
+    width: 258px;
+    height: 345px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 14px;
+    position: absolute;
+    top: 88px;
+    left: -42px;
+    z-index: 20;
+}
+
+.user_info .bot,
+.user_info .top {
+    width: 0;
+    height: 0;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent #ddd;
+    position: absolute;
+    top: -24px;
+    left: 115px;
+
+}
+.user_info .top {
+    border-color: transparent transparent #fff;
+    top:-22px;
+}
+
+.user_info .basic_info {
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+.user_info .basic_info li,
+.user_info .basic_info span,
+.user_info span {
+    float: left;
+}
+.user_info .basic_info li {
+    width: 75px;
+    margin-top: 20px;
+}
+.user_info .basic_info li:first-child {
+    margin-left: 14px;
+}
+.user_info .basic_info li a {
+    font-size: 14px;
+}
+.user_info .basic_info li a:hover  {
+    color: green;
+}
+.user_info .basic_info li p {
+    color: #888;
+}
+.user_info .basic_info span,
+.user_info span {
+    width: 1px;
+    height: 25px;
+    margin-top: 25px;
+    border-left: 1px solid #ddd;
+}
+
+.user_info .vip_info {
+    height: 115px;
+    border-bottom: 1px solid #ddd;
+}
+.vip_info li,
+.pay_info li {
+    clear: both;
+}
+.vip_info .vip_logo,
+.pay_info .pay_logo {
+    height: 25px;
+    width: 25px;
+
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    line-height: 25px;
+    float: left;
+    margin: 25px 0 10px 15px;
+}
+.vip_info .vip_logo {
+    background-image: url(../images/Diamonds1.png);
+}
+.vip_info .levelProgressBar {
+    width: 170px;
+    border-bottom: 1px solid #999;
+    float: left;
+    margin: 35px 0 0 15px;
+}
+.vip_info p,
+.pay_info p {
+    float: left;
+    margin:0 0 6px 15px;
+    color: #999;
+}
+.vip_info .open,
+.pay_info .open {
+    float: right;
+    margin-right: 30px;
+}
+.vip_info .open:hover,
+.pay_info .open:hover {
+    color: green;
+}
+
+.user_info .pay_info {
+    height: 115px;
+    border-bottom: 1px solid #ddd;
+}
+.pay_info .pay_logo {
+    background-image: url(../images/sui_g.png);
+}
+.user_info .home,
+.user_info .exit {
+    float: left;
+    display: inline-block;
+    width: 128px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.user_info .home:hover,
+.user_info .exit:hover {
+    color: green;
+}
+.user_info span {
+    margin-top: 10px;
+}
 /*左身*/
 .left_nav {
-    height: 416px;
-    overflow: scroll;
+    height: 402px;
+    overflow: auto;
     background-color: transparent;
 }
 .left_nav .navBox {
@@ -186,8 +317,8 @@
 }
 /*右边部分*/
 .right_top {
-    height: 45px;
-    line-height: 45px;
+    height: 44px;
+    line-height: 44px;
     border-bottom: 1px solid #999;
 }
 .top_search {
@@ -452,7 +583,7 @@
     display: none;
 }
 .newSing_text p {
-    width: 110px;
+    width: 150px;
     text-overflow: ellipsis;
     white-space: nowrap;
     line-height: 20px;
@@ -725,4 +856,86 @@
     height: 15px;
     width: 15px;
     background-size: 15px 15px;
+}
+/*歌曲详细信息*/
+.right_area .Song_details {
+    height: 566px;
+    width: 1050px;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    background-color: #000;
+    z-index: 22;
+    /*background-image: url(../images/newsing8.jpg);
+    background-repeat: no-repeat;;
+    background-position: center center;
+    background-size: 100%;
+    -webkit-filter: blur(10px);
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);
+            filter: blur(10px);*/
+
+}
+.Song_details .bgimg {
+    height: 566px;
+    width: 1050px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/newsing8.jpg);
+    background-position: center center;
+    background-size: 100%;
+    -webkit-filter: blur(35px) opacity(0.5);
+    filter: blur(25px) opacity(0.5);
+
+}
+.Song_details .details_top {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 15px;
+    background-image: url(../images/downward1.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+.Song_details .details_info {
+    position: relative;
+    background-color: #999;
+}
+
+.Song_details .details_info img {
+    width: 260px;
+    height: 260px;
+    background-image: url(../images/newsing8.jpg);
+    background-repeat: no-repeat;
+    background-size: 260px 260px;
+    position: absolute;
+    top: 110px;
+    left: 170px;
+}
+
+.details_info .Song_info {
+    position: absolute;
+    top: 50px;
+    left: 535px;
+}
+.details_info .Song_info h2,
+.Song_info a {
+    font-size: 24px;
+    font-weight: lighter;
+    color: #fff;
+    width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.details_info .Song_info a {
+    font-size: 16px;
+    color: #777;
+    width: 150px;
+}
+.details_info .Song_info .lyric {
+    margin-top: 20px;
+    color: #fff;
 }

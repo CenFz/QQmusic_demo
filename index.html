@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="css/icon/iconfont.css" media="screen" title="no title" charset="utf-8">
         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/basic.js"></script>
+        <script type="text/javascript" src="js/carousel.js"></script>
 
     </head>
     <body>
@@ -21,10 +21,60 @@
         <main id="main_page" class="clearfix">
             <div class="left_area fl">
                 <div class="left_top">
-                    <img class="lhead" src="images/back.jpg" alt="" />
-                    <a href="#">Cent</a>
+                    <a><img class="lhead" src="images/back.jpg" alt="" /></a>
+                    <div class="user_info clearfix hide">
+                        <div class="bot"></div>
+                        <div class="top"></div>
+                        <ul class="basic_info">
+                            <li title="歌单">
+                                <a href="#">0</a>
+                                <p>歌单</p>
+                            </li>
+                            <span></span>
+                            <li title="关注">
+                                <a href="#">0</a>
+                                <p>关注</p>
+                            </li>
+                            <span></span>
+                            <li title="粉丝">
+                                <a href="#">0</a>
+                                <p>粉丝</p>
+                            </li>
+                        </ul>
+                        <ul class="vip_info">
+                            <li>
+                                <img src="images/Diamonds1.png" alt="VIP用户" class="vip_logo" />
+                                <div class="levelProgressBar" title="等级进度"></div>
+                            </li>
+                            <li>
+                                <p>豪华: 未开通</p>
+                                <a href="#" class="open">开通</a>
+                            </li>
+                            <li>
+                                <p>年费: 未开通</p>
+                                <a href="#" class="open">开通</a>
+                            </li>
+                        </ul>
+                        <ul class="pay_info">
+                            <li>
+                                <img src="images/sui_g.png" alt="付费音乐logo" class="pay_logo" />
+                            </li>
+                            <li>
+                                <p>付费音乐包: 未开通</p>
+                                <a href="#" class="open">开通</a>
+                            </li>
+                            <li>
+                                <p>豪华付费音乐包:未开通</p>
+                                <a href="#" class="open">开通</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="home">个人主页</a>
+                        <span></span>
+                        <a href="#" class="exit">退出账户</a>
+                    </div>
+                    <p>Cent</p>
                     <i></i>
-                    <div></div>
+                    <div class="slideLine"></div>
                 </div>
                 <div class="left_nav">
                     <dl class="navBox">
@@ -393,8 +443,33 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+                <div class="Song_details hide">
+                    <!--<img src="images/newsing8.jpg" class="bgimg"></img>-->
+                    <div class="bgimg"></div>
+                    <div class="details_top">
+                        <a></a>
+                    </div>
+                    <div class="details_info">
+                        <img src="images/newsing8.jpg" alt="歌曲专辑图片" />
+                        <div class="Song_info">
+                            <h2 class="song">歌曲名</h2>
+                            <a href="#">歌手:歌手名</a>
+                            <a href="#">专辑：专辑名</a>
+                            <div class="lyric">
+                                <p>歌词</p>
+                                <p>歌词</p>
+                                <p>歌词</p>
+                                <p>歌词</p>
+                                <p>歌词</p>
+                                <p>歌词</p>
+                                <p>歌词</p>
+                                <p>歌词</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-music-list-wrap"></div>
                 <div class="right_footer clearfix">
                     <div class="wrap" id="g_player">
                         <div class="head">
@@ -438,5 +513,6 @@
 	            Carousel.init($(".J_Poster"));
             });
         </script>
+        <script src="js/musicPlayer.js" charset="utf-8"></script>
     </body>
 </html>

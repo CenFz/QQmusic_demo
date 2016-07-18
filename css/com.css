@@ -9,13 +9,13 @@
 }
 
 /*通用*/
-* {
-	padding: 0;
-	margin: 0;
-}
-body, dl,dt,dd,ol,ul,li {
-    padding: 0;
+html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, label, th, td, a, img {
     margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+body {
     font-size: 12px;
     font-family: Arial,Tahoma,"hiragino sans gb",Helvetica;
 }
