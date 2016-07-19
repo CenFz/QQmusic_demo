@@ -38,3 +38,9 @@ a {
 img {
 	border: 0 none;
 }
+.f-toe {
+	overflow: hidden;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

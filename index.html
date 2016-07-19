@@ -13,12 +13,12 @@
         <header id="top">
             <div class="divtop">
                 <h1 class="top_logo">
-                    <img class="img_logo" src="images/frame_logo_min.png" alt="QQ音乐" />
+                    <img class="img_logo" src="images/frame_logo@2x.png" alt="QQ音乐" />
                     <a class="logo" href="http://y.qq.com/" title="QQ音乐-中国最新最全免费正版高品质音乐平台！"></a>
                 </h1>
             </div>
         </header>
-        <main id="main_page" class="clearfix">
+        <main id="main_page" class="music-container clearfix">
             <div class="left_area fl">
                 <div class="left_top">
                     <a><img class="lhead" src="images/back.jpg" alt="" /></a>
@@ -102,9 +102,18 @@
                 <div class="left_footer">
                     <div class="m_play_controls">
                         <a class="m_play_btn prev" title="上一首"></a>
-                        <a class="m_play_btn ctrl-play" title="暂停"></a>
+                        <a class="m_play_btn ctrl-play play" title="暂停"></a>
                         <a class="m_play_btn next" title="下一首"></a>
-                        <a class="m_play_btn volume" title="音量"></a>
+                        <div class="volume-box">
+                            <div class="bot"></div>
+                            <div class="top"></div>
+                            <div class="volume" data-volume="0.50" title="音量">
+                                <span class="volume-current"></span>
+                                <span class="volume-bar"></span>
+                                <span class="volume-event"></span>
+                            </div>
+                        </div>
+                        <a class="m_paly_btn volume-control"></a>
                         <a class="m_play_btn mode" title="循环模式"></a>
                     </div>
                 </div>
@@ -456,38 +465,45 @@
                             <h2 class="song">歌曲名</h2>
                             <a href="#">歌手:歌手名</a>
                             <a href="#">专辑：专辑名</a>
-                            <div class="lyric">
-                                <p>歌词</p>
-                                <p>歌词</p>
-                                <p>歌词</p>
-                                <p>歌词</p>
-                                <p>歌词</p>
-                                <p>歌词</p>
-                                <p>歌词</p>
-                                <p>歌词</p>
+                            <div class="lyric js-music-lyric-content">
+                                <li class="eof">暂无歌词...</li>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="m-music-list-wrap"></div>
+                <div class="m-music-list-wrap">
+                    <!--<div class="list-title">
+                        <h2>播放列表</h2>
+                        <p>共00首歌曲</p>
+                        <a>添加到</a>
+                        <a>清空</a>
+                    </div>
+                    <div class="Song-list">
+                        <ul>
+                            <li class="f-toe">111111</li>
+                            <li class="f-toe">222222</li>
+                            <li class="f-toe">333333</li>
+                            <li class="f-toe">444444</li>
+                        </ul>
+                    </div>-->
+                </div>
                 <div class="right_footer clearfix">
                     <div class="wrap" id="g_player">
-                        <div class="head">
+                        <div class="head u-cover">
                             <img src="images/newsing8.jpg" alt="" />
                             <a href="#" class="mask"></a>
                         </div>
                         <div class="play">
-                            <div class="words">
+                            <div class="words u-music-title">
                                 <a class="song" href="#">歌曲名称</a>
                                 <span><a href="#">-歌手</a></span>
-                                <span class="time"><em>00:00</em>/00:00 </span>
+                                <span class="time">00:00/00:00</span>
                             </div>
                             <div class="m-pbar">
                                 <div class="barbg">
-                                    <div class="rdy"></div>
-                                    <div class="cur">
-                                        <span class="cur_thumb"></span>
-                                    </div>
+                                    <span class="buffer-process"></span>
+                                    <span class="cur_thumb"></span>
+                                    <span class="current-process"></span>
                                 </div>
                             </div>
                         </div>
@@ -499,7 +515,7 @@
                             <a href="#" class="more">更多</a>
                             <a href="#" class="quality">标准 v</a>
                             <a href="#" class="Sound">音效</a>
-                            <a href="#" class="Lyric">词</a>
+                            <a class="Lyric-word">词</a>
                             <a href="#" class="Playlist">播放列表</a>
                         </div>
                     </div>
@@ -507,12 +523,22 @@
             </div>
 
         </main>
+        <script src="js/musicList.js" charset="utf-8"></script>
+        <script src="js/musicPlayer.js" charset="utf-8"></script>
         <script>
             $(function(){
                 //var carousel = new Carousel($("J_Poster").eq(0));
 	            Carousel.init($(".J_Poster"));
             });
+            new SMusic({
+                musicList : musicList,
+                autoPlay : true,  //是否自动播放
+                defaultMode : 1,  //默认播放模式，列表
+                callback : function(obj) {  //返回当前播放歌曲信息
+                    console.log(obj);
+                }
+            });
         </script>
-        <script src="js/musicPlayer.js" charset="utf-8"></script>
+
     </body>
 </html>
