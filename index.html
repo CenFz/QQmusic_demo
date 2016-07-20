@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <a class="m_paly_btn volume-control"></a>
-                        <a class="m_play_btn mode" title="循环模式"></a>
+                        <a class="m_play_btn list-circular" title="循环模式"></a>
                     </div>
                 </div>
             </div>
@@ -453,21 +453,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="Song_details hide">
+                <div class="Song_details">
                     <!--<img src="images/newsing8.jpg" class="bgimg"></img>-->
                     <div class="bgimg"></div>
                     <div class="details_top">
                         <a></a>
                     </div>
                     <div class="details_info">
-                        <img src="images/newsing8.jpg" alt="歌曲专辑图片" />
-                        <div class="Song_info">
+                        <div class="b-cover">
+                            <img src="images/newsing8.jpg" alt="歌曲专辑图片" />
+                        </div>
+                        <div class="b-music-title">
                             <h2 class="song">歌曲名</h2>
-                            <a href="#">歌手:歌手名</a>
-                            <a href="#">专辑：专辑名</a>
-                            <div class="lyric js-music-lyric-content">
-                                <li class="eof">暂无歌词...</li>
-                            </div>
+                            <a>歌手:歌手名</a>
+                            <a>专辑：专辑名</a>
+                        </div>
+                        <div class="m-music-lyric-wrap">
+                            <div class="inner">
+                                <ul class="js-music-lyric-content">
+                                    <li class="eof">暂无歌词...</li>
+                                </ul>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -491,14 +497,14 @@
                     <div class="wrap" id="g_player">
                         <div class="head u-cover">
                             <img src="images/newsing8.jpg" alt="" />
-                            <a href="#" class="mask"></a>
                         </div>
+                        <a class="mask"></a>
                         <div class="play">
                             <div class="words u-music-title">
-                                <a class="song" href="#">歌曲名称</a>
-                                <span><a href="#">-歌手</a></span>
-                                <span class="time">00:00/00:00</span>
+                                <a class="song test">歌曲名称</a>
+                                <span><a>-歌手</a></span>
                             </div>
+                            <span class="time"></span>
                             <div class="m-pbar">
                                 <div class="barbg">
                                     <span class="buffer-process"></span>
@@ -508,14 +514,14 @@
                             </div>
                         </div>
                         <div class="down">
-                            <a href="#" class="love">最喜欢</a>
+                            <a class="love">最喜欢</a>
                             <a href="#" class="download">下载</a>
                         </div>
                         <div class="other">
                             <a href="#" class="more">更多</a>
                             <a href="#" class="quality">标准 v</a>
                             <a href="#" class="Sound">音效</a>
-                            <a class="Lyric-word">词</a>
+                            <!--<a class="Lyric-word">词</a>-->
                             <a href="#" class="Playlist">播放列表</a>
                         </div>
                     </div>

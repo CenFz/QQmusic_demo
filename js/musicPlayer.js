@@ -203,7 +203,10 @@
             this.musicDom.curProcess.style.width = 0 + 'px';
             this.audioDom.src = nowMusic.src;
             this.musicDom.cover.innerHTML = '<img src="'+nowMusic.cover+'" title="'+nowMusic.title+' -- '+ nowMusic.singer +'">';
-            this.musicDom.title.innerHTML = '<strong>'+nowMusic.title+'</strong><small>'+nowMusic.singer+'</small>';
+            this.musicDom.title.innerHTML = '<a class="song">'+nowMusic.title+'</a><span><a>-'+nowMusic.singer+'</a></span><span class="time"></span>';
+            this.musicDom.bigCover.innerHTML = '<img src="'+nowMusic.cover+'" title="'+nowMusic.title+' -- '+ nowMusic.singer +'">';
+            this.musicDom.bgCover.style.backgroundImage = "url("+nowMusic.cover+")";
+            this.musicDom.bigTitle.innerHTML = '<h2 class="song">'+nowMusic.title+'</h2><a>歌手:'+nowMusic.singer+'</a><a>专辑:'+nowMusic.album+'</a>';
             me.musicDom["lyricWrap"].innerHTML = '<li class="eof">正在加载歌词...</li>';
             me.musicDom["lyricWrap"].style.marginTop = 0 + "px";
             me.musicDom["lyricWrap"].scrollTop = 0;
@@ -251,7 +254,7 @@
         /*初始化播放器*/
         initPlay : function(){
             var idx = this.config.defaultIndex;
-            console.log(idx);
+            //console.log(idx);
             if(this.playMode == 2) { //随机播放
                 idx = this.getRandomIndex();
             }
@@ -280,16 +283,15 @@
             //addClass(this.musicDom.cover,'paused');
         },
         /*//获取不包含当前索引的随机索引*/
-        getRandomIndex : function() {
-            var idx = this.currentMusic,
-                len = this.musicLength,
-                temp = 0;
-            for (var i = 0; i < len; i++) {
-                if (i != idx) {
+        getRandomIndex : function(){
+            var idx = this.currentMusic,len  = this.musicLength, i = 0, temp = [];
+            //应该在不包括当前的列表中播放
+            for(i;i<len;i++){
+                if(i != idx){
                     temp.push(i);
                 }
             }
-            var random = parseInt(Math.random()*temp.length);
+            var random = parseInt(Math.random() * temp.length);
             return temp[random];
         },
         //通过播放模式加载歌曲并播放
@@ -298,6 +300,7 @@
                 idx = this.currentMusic,
                 len = this.musicLength,
                 index = idx;
+                console.log(modes);
             if (modes == 1) { //列表
                 if (type == 'prev') {
                     index = ((idx <= len -1) && (idx >0)) ? (idx-1) : (len-1);
@@ -307,16 +310,11 @@
             } else if (modes == 2) { //随机
                 index = this.getRandomIndex();
             } else if (modes == 3) { //单曲
-                if (type == 'prev') {
-                    index = ((idx <= len - 1) && (idx > 0)) ? (idx-1) : (len-1);
-                } else if (type == 'next') {
-                    index = (idx >= len - 1) ? 0 : (idx+1);
-                } else {
                     index = idx;
-                }
             }
             this.resetPlayer(index);
         },
+
         //一些操作
         action : function() {
             var me = this, v = this.musicDom.volume,btn = this.musicDom.button;
@@ -335,21 +333,22 @@
                     //歌词滚动
                     //设置歌词
                     var curTime = parseInt(audio.currentTime*1e3);
-                    var lyrics = me.musicDom["lyricWrap"].querySelectorAll("u-lyric"),
-                        sizes = lyrics.length;
-                    if (sizes > 1) {
-                        for (var i = 0; i < sizes; i++) {
+                    var lyrics  = me.musicDom["lyricWrap"].querySelectorAll(".u-lyric"),
+                        sizes   = lyrics.length,
+                        i       = 0;
+                    if(sizes > 1){
+                        for(;i < sizes ; i++){
                             var lyl = lyrics[i];
-                            if (lyl) {
+                            if(lyl){
                                 var _time = parseFloat(lyl.getAttribute("data-time"));
-                                if (curTime >= _time) {
-                                    var top = (i-1) *30;    //30是每个LI的高度
-                                    me.musicDom["lyricWrap"].style.marginTop = -top + 'px';
+                                if(curTime >= _time){
+                                    var top = (i-1) * 40; //40是每个LI的高度
+                                    me.musicDom["lyricWrap"].style.marginTop = -top + "px";
                                     //移除之前的current，想念Jquery的siblings
-                                    for(var j = 0; j <sizes; j++) {
+                                    for(var j = 0 ; j < sizes ;j++){
                                         lyrics[j] && removeClass(lyrics[j],"current");
                                     }
-                                    addClass(lyl,"current");   //给当前行加上current
+                                    addClass(lyl,"current"); //给当前行加上current
                                 }
                             }
                         }
@@ -418,12 +417,26 @@
             //模式选择
             //列表循环
             btn.listCircular.addEventListener('click',function() {
-                addClass(this,'current');
+                if (hasClass(this,'list-circular')) {
+                    removeClass(this,'list-circular');
+                    addClass(this,'random-play');
+                    me.playMode = 2;
+                    //doing
+                } else if (hasClass(this,'random-play')) {
+                    removeClass(this,'random-play');
+                    addClass(this,'single-circular');
+                    me.playMode = 3;
+                } else {
+                    removeClass(this,'single-circular');
+                    addClass(this,'list-circular')
+                    me.playMode = 1;
+                }
+                /*addClass(this,'current');
                 removeClass(btn.singleCircular,'current');
                 removeClass(btn.randomPlay,'current');
-                me.playMode = 1;
+                me.playMode = 1;*/
             });
-            //随机播放
+            /*//随机播放
             btn.randomPlay.addEventListener('click',function(){
                 addClass(this,'current');
                 removeClass(btn.singleCircular,'current');
@@ -436,7 +449,7 @@
                 removeClass(btn.listCircular,'current');
                 removeClass(btn.randomPlay,'current');
                 me.playMode = 3;
-            });
+            });*/
             //显示歌曲列表
             btn.playlist.addEventListener('click',function(){
                 if (hasClass(me.musicDom.listWrap,'show')) {
@@ -452,6 +465,16 @@
             me.musicDom.curProcess.addEventListener('mouseout',function() {
                 removeClass(me.musicDom.curThumb,'show');
             });
+            //点击歌曲小图片显示歌曲详细信息
+            me.musicDom.songDetail.addEventListener('click',function(){
+                var Song_details =$('.music-container .Song_details');
+                if (hasClass(Song_details,'show')) {
+                    removeClass(Song_details,'show');
+                } else {
+                    addClass(Song_details,'show');
+                }
+            });
+
             //拖动进度条，快进
             var $progress = this.musicDom["curProcess"].parentNode;
             $progress.addEventListener('click',function(e){
@@ -464,6 +487,7 @@
                     me.audioDom.currentTime = parseInt((progressX/width)*(me.audioDom.duration)); //重新设置播放进度
                 }
             });
+
         },
         /**
          * 加载歌词
@@ -559,13 +583,16 @@
                  music : $('.music-container'),
                  cover : $('.music-container .u-cover'),
                  title : $('.music-container .u-music-title'),
+                 bigCover : $('.music-container .b-cover'),
+                 bgCover : $('.music-container .bgimg'),
+                 bigTitle : $('.music-container .b-music-title'),
                  curProcess : $('.music-container .current-process'),
                  bufferProcess : $('.music-container .buffer-process') ,
                  time : $('.music-container .time'),
                  listWrap : $('.music-container .m-music-list-wrap'),
                  lyricWrap : $('.music-container .js-music-lyric-content'), //歌词区域
-                 curThumb : $('.music-container .cur_thumb'),  //
-
+                 curThumb : $('.music-container .cur_thumb'),  //歌曲进度条原点
+                 songDetail : $('.music-container .mask'),   //点击歌曲小图获得歌曲歌词和大图
                  volume : {
                      volumeBox : $('.music-container .volume-box'),
                      volumeProcess : $('.music-container .volume'),
@@ -578,13 +605,14 @@
                      ctrl : $('.music-container .ctrl-play'),
                      prev : $('.music-container .prev'),
                      next : $('.music-container .next'),
-                     listCircular : $('.music-container .mode'),  ////列表循环
-                     randomPlay : $('.music-container .mode'),  //随机循环
-                     singleCircular : $('.music-container .mode'),  //单曲循环
+                     listCircular : $('.music-container .list-circular'),  ////列表循环
+                     //randomPlay : $('.music-container .mode'),  //随机循环
+                     //singleCircular : $('.music-container .mode'),  //单曲循环
                      singleWords : $(".music-container .Lyric-word"), //歌词
                      playlist : $('.music-container .Playlist')
                  }
              };
+
              this.currentMusic = this.config.defaultIndex || 0;
              this.playMode = this.config.defaultMode || 1; //播放模式，默认列表循环
              this.lyricCache = {}; //缓存已加载的歌词文件

@@ -388,15 +388,28 @@
     -webkit-transition: bottom .2s linear;
     transition: bottom .2s linear;
 }
-.m_play_controls .mode {
+.m_play_controls .list-circular,
+.m_play_controls .random-play,
+.m_play_controls .single-circular {
     width: 20px;
     height: 20px;
-    background-image: url(../images/cycle_list.png);
     background-repeat: no-repeat;
     background-size: 15px 15px;
     position: absolute;
     top: 20px;
     right: 15px;
+}
+.m_play_controls .list-circular {
+    background-image: url(../images/cycle_list.png);
+}
+.m_play_controls .random-play {
+    background-image: url(../images/random_cycle.png);
+    background-size: 20px 20px;
+    top: 18px;
+    right: 18px;
+}
+.m_play_controls .single-circular {
+    background-image: url(../images/cycle_one.png);
 }
 /*右边部分*/
 .right_top {
@@ -787,7 +800,7 @@
     display: block;
     width: 35px;
     height: 35px;
-
+    cursor: pointer;
 }
 .wrap .mask:hover {
     opacity: 0.7;
@@ -804,6 +817,7 @@
 .wrap .play .words {
     height: 16px;
     overflow: hidden;
+    width: 330px;
 }
 .wrap .play .words .song {
     font-size: 13px;
@@ -984,9 +998,7 @@
 }
 .Song_details .details_info {
     position: relative;
-    background-color: #999;
 }
-
 .Song_details .details_info img {
     width: 260px;
     height: 260px;
@@ -997,14 +1009,13 @@
     top: 110px;
     left: 170px;
 }
-
-.details_info .Song_info {
+.details_info .b-music-title {
     position: absolute;
     top: 50px;
     left: 535px;
 }
-.details_info .Song_info h2,
-.Song_info a {
+.details_info .b-music-title h2,
+.b-music-title a {
     font-size: 24px;
     font-weight: lighter;
     color: #fff;
@@ -1013,14 +1024,39 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.details_info .Song_info a {
+.details_info .b-music-title a {
+    display: inline-block;
+    margin-top: 20px;
     font-size: 16px;
     color: #777;
     width: 150px;
 }
-.details_info .Song_info .lyric {
+.details_info .b-music-title a:hover {
+    color: green;
+}
+.details_info .m-music-lyric-wrap {
+    font-family: '兰亭黑';
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    position: absolute;
+    top: 130px;
+    right: 215px;
     margin-top: 20px;
-    color: #fff;
+    color: #ddd;
+}
+.details_info .m-music-lyric-wrap .u-lyric{
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+.details_info .m-music-lyric-wrap .current {
+    color: #3ac17e;
+}
+.details_info .m-music-lyric-wrap .inner {
+    height: 100%;
+    background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(top,rgba(0,0,0,.5),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5));
 }
 /*歌曲列表*/
 .m-music-list-wrap {
