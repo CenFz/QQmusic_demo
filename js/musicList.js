@@ -8,7 +8,7 @@ var musicList = [
         title : '我好像在哪见过你 (《精灵王座》动画电影主题曲)',
         singer : '薛之谦',
         cover  : 'http://i.gtimg.cn/music/photo/mid_album_300/6/2/000dcZ9I1nzO62.jpg',
-        src    : 'http://dl.stream.qqmusic.qq.com/C200004VBMk71TdUuR.m4a?vkey=23962718F60ACE712C2AD28B3A1893DF6D3B606A3D67ECF357895AA18B54BFF3DABA42F43CABEE824B519E9CB56BFAE5F6992328F7F271F5&guid=4646573411&fromtag=30',
+        src    : 'http://dl.stream.qqmusic.qq.com/C200004VBMk71TdUuR.m4a?vkey=20B19B9CC97713BE41F3D878A957B07A367E686FAB05E61CF2CCD9E747D89FEE08C6EB91D8AA20F5774AD9B319CCCDE0A9B20FD17728C0AB&guid=4646573411&fromtag=30',
 		lyric  : "src/data/whxznjgn.lrc"
     },
     {

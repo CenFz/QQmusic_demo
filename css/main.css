@@ -29,6 +29,19 @@
     top: 35px;
     left: 150px;
 }
+/*icon图标系列*/
+.icon-img {
+    display: block;
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-size: 100px 2740px;
+}
+.newicon {
+    display: block;
+    background-image: url(../images/newicon.png);
+    background-repeat: no-repeat;
+    background-size: 120px 360px;
+}
 /*main*/
 #main_page {
     width: 1050px;
@@ -66,8 +79,11 @@
 }
 .left_top i {
     display: block;
-    height: 25px;
-    background: url(../images/svip.png) center center no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position: 0 0;
+    margin: 0 auto;
+    background-size: 50px 1370px;
 }
 .left_top .slideLine {
     border-bottom: 1px solid #dce4e8;
@@ -88,8 +104,11 @@
     top: 88px;
     left: -42px;
     z-index: 20;
+    visibility: hidden;
 }
-
+.left_top .user_info.show {
+    visibility: visible;
+}
 .user_info .bot,
 .user_info .top {
     width: 0;
@@ -152,15 +171,14 @@
 .pay_info .pay_logo {
     height: 25px;
     width: 25px;
-
     background-repeat: no-repeat;
-    background-size: 25px 25px;
-    line-height: 25px;
+    background-size: 78px 2141px;
+    //line-height: 25px;
     float: left;
     margin: 25px 0 10px 15px;
 }
 .vip_info .vip_logo {
-    background-image: url(../images/Diamonds1.png);
+    background-position: 0 0;
 }
 .vip_info .levelProgressBar {
     width: 170px;
@@ -238,11 +256,10 @@
     position: relative;
 }
 .left_nav .list_add .add_songs {
-    display: block;
-    background-image: url(../images/add.png);
     height: 15px;
     width: 15px;
-    background-size: 15px 15px;
+    background-size: 15px 411px;
+    background-position: 0 -49px;
     position: absolute;
     top:10px;
     right: 10px;
@@ -260,16 +277,13 @@
 }
 .left_footer .m_play_controls .m_play_btn {
     display: block;
-/*    background-image: url(../images/icon_sprite@2x.png);
-    background-repeat: no-repeat;*/
     overflow: hidden;
 }
 .m_play_controls .prev {
     width: 25px;
     height: 25px;
-    background-image: url(../images/prevsong2.png);
-    background-repeat: no-repeat;
-    background-size: 25px 25px;
+    background-size: 25px 685px;
+    background-position: 0 -487px;
     position: absolute;
     top: 15px;
     left: 15px;
@@ -277,42 +291,40 @@
 .m_play_controls .ctrl-play{
     width: 30px;
     height: 30px;
-
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
+    background-size: 30px 821px;
+    background-position: 0 -404px;
     position: absolute;
     top: 12.5px;
     left: 50px;
 }
 .m_play_controls .ctrl-play.play {
-    background-image: url(../images/play2.png);
+    background-position: 0 -404px;
 }
 .m_play_controls .ctrl-play.paused {
-    background-image: url(../images/play4.png);
+    background-position: 0 -464px;
 }
 .m_play_controls .next {
     width: 25px;
     height: 25px;
-    background-image: url(../images/nextsong2.png);
-    background-repeat: no-repeat;
-    background-size: 25px 25px;
+    background-size: 25px 685px;
+    background-position: 0 -287px;
     position: absolute;
     top: 15px;
     left: 90px;
 }
 .m_play_controls .volume-control {
-    width: 20px;
-    height: 20px;
-    background-image: url(../images/vol1.png);
-    background-repeat: no-repeat;
-    background-size: 15px 15px;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 439px;
+    background-position: 0 -418px;
     position: absolute;
     top: 20px;
     right: 40px;
     cursor: pointer;
 }
 .m_play_controls .volume-control.muted {
-    background-image: url(../images/muted.png);
+    background-size: 50px 1370px;
+    background-position: 0 -509px;
 }
 .m_play_controls .volume-box {
     width: 40px;
@@ -391,25 +403,22 @@
 .m_play_controls .list-circular,
 .m_play_controls .random-play,
 .m_play_controls .single-circular {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     background-repeat: no-repeat;
-    background-size: 15px 15px;
+    background-size: 17px 440px;
     position: absolute;
     top: 20px;
     right: 15px;
 }
 .m_play_controls .list-circular {
-    background-image: url(../images/cycle_list.png);
+    background-position: 0 -84px;
 }
 .m_play_controls .random-play {
-    background-image: url(../images/random_cycle.png);
-    background-size: 20px 20px;
-    top: 18px;
-    right: 18px;
+    background-position: 0 -99px;
 }
 .m_play_controls .single-circular {
-    background-image: url(../images/cycle_one.png);
+    background-position: 0 -331px;
 }
 /*右边部分*/
 .right_top {
@@ -429,9 +438,8 @@
 .top_search .search_prve_btn{
     height: 20px;
     width: 20px;
-    background-image: url(../images/left.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 20px 548px;
+    background-position: 0 -183px;
     position: absolute;
     top: 12px;
     left: 10px;
@@ -439,9 +447,8 @@
 .top_search .search_next_btn{
     height: 20px;
     width: 20px;
-    background-image: url(../images/right.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 20px 548px;
+    background-position: 0 -433px;
     position: absolute;
     top: 12px;
     left: 50px;
@@ -454,9 +461,8 @@
 .top_search .Set_up {
     height: 20px;
     width: 20px;
-    background-image: url(../images/Set_up.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 63px 1711px;
+    background-position: 0 -182px;
     position: absolute;
     top: 12px;
     right: 60px;
@@ -464,9 +470,8 @@
 .top_search .streamline {
     height: 20px;
     width: 20px;
-    background-image: url(../images/streamline.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 63px 1711px;
+    background-position: 0 -1473px;
     position: absolute;
     top: 12px;
     right: 25px;
@@ -630,30 +635,27 @@
 }
 .newSing_nav .mod_play {
     width: 16px;
-    height: 26px;
+    height: 16px;
     text-indent: -99999px;
-    background-image: url(../images/play1.png);
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    margin-left: 25px;
+    background-size: 16px 439px;
+    background-position: 0 -200px;
+    margin: 0 0 10px 25px;
 }
 .next_btn {
     width: 16px;
-    height: 26px;
+    height: 16px;
     text-indent: -99999px;
-    background-image: url(../images/R1.png);
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    margin-left: 15px;
+    background-size: 50px 1370px;
+    background-position: 0 -130px;
+    margin: 0 0 10px 15px;
 }
 .prve_btn {
     width: 16px;
-    height: 26px;
+    height: 16px;
     text-indent: -99999px;
-    background-image: url(../images/L1.png);
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    margin-left: 630px;
+    background-size: 50px 1370px;
+    background-position: 0 -32px;
+    margin: 0 0 10px 630px;
 }
 .newSing_info {
     width: 798px;
@@ -900,19 +902,16 @@
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-image: url(../images/icon_sprite@2x.png);
-    background-size: 144px 432px;
-    background-repeat: no-repeat;
     overflow: hidden;
     text-indent: -99999px;
 }
 .down .love {
-    background-position: -81px -132px;
+    background-size: 30px 90px ;
+    background-position: 0px -60px;
 }
 .down .download {
-    background-image: url(../images/icon_sprite@2x.png);
-    background-size: 238px 720px;
-    background-position: -133px -273px
+    background-size: 30px 90px;
+    background-position: 0 -45px
 }
 .wrap .other {
     width: 200px;
@@ -927,8 +926,8 @@
     cursor: pointer;
 }
 .other .more {
-    background-size: 270px 816px;
-    background-position:-59px -232px ;
+    background-size: 30px 90px;
+    background-position: 0 -30px ;
 }
 .other .quality,
 .other .Sound {
@@ -953,11 +952,10 @@
     cursor: pointer;
 }
 .other .Playlist {
-    background-image: url(../images/PlayList.png);
-    background-repeat: no-repeat;
     height: 15px;
     width: 15px;
-    background-size: 15px 15px;
+    background-size: 15px 435px;
+    background-position: 0 -21px;
 }
 /*歌曲详细信息*/
 .right_area .Song_details {
@@ -992,9 +990,9 @@
     height: 20px;
     display: block;
     margin: 15px;
-    background-image: url(../images/downward1.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
+    //background-image: url(../images/downward1.png);
+    //background-repeat: no-repeat;
+    //background-size: 20px 20px;
 }
 .Song_details .details_info {
     position: relative;
@@ -1084,4 +1082,93 @@
     height: 60px;
     text-align: center;
     line-height: 60px;
+}
+/*登录页面*/
+.login-cover {
+    position: absolute;
+    top: 40%;
+    left:40%;
+    width: 302px;
+    height: 382px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 6;
+    visibility: hidden;
+}
+.login-cover .welcome-top {
+    height: 30px;
+}
+.welcome-top .close_bg {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.welcome-top .close_bg:hover {
+    background-image: url(../images/quit.png);
+    background-size: 12px 12px;
+    background-color: #fff;
+}
+.login-cover .welcome-img {
+    text-align: center;
+    height: 185px;
+    overflow: hidden;
+}
+.login-cover .u-backimg {
+    opacity: 0.1;
+}
+.login-cover .u-head {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: 70px;
+    left: 88px;
+}
+.login-cover .welcome-input {
+    padding: .8em;
+    width: 80%;
+    margin: .7em auto;
+    display: block;
+    box-shadow: none;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    transition: border .3s;
+}
+.login-cover .welcome-input:focus {
+    border: 1px solid #3ac17e;
+}
+.login-cover .welcome-btn {
+    background-color: #fff;
+    font-size: 22px;
+    color: #3ac17e;
+    position: absolute;
+    bottom: 68px;
+    right: 21px;
+    visibility: hidden;
+}
+.login-cover .welcome-btn.open {
+    visibility: visible;
+}
+.login-cover .login-text {
+    margin: 2em 20px;
+    position: relative;
+}
+.login-text .checklogin {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+}
+.login-text .checklogin:checked {
+    background-color: #3ac17e;
+    border-color: #3ac17e;
+}
+.login-text span {
+    position: absolute;
+    right: 0;
+}
+.login-text span:hover {
+    color: #3ac17e;
 }

@@ -300,7 +300,7 @@
                 idx = this.currentMusic,
                 len = this.musicLength,
                 index = idx;
-                console.log(modes);
+                //console.log(modes);
             if (modes == 1) { //列表
                 if (type == 'prev') {
                     index = ((idx <= len -1) && (idx >0)) ? (idx-1) : (len-1);
@@ -436,20 +436,6 @@
                 removeClass(btn.randomPlay,'current');
                 me.playMode = 1;*/
             });
-            /*//随机播放
-            btn.randomPlay.addEventListener('click',function(){
-                addClass(this,'current');
-                removeClass(btn.singleCircular,'current');
-                removeClass(btn.listCircular,'current');
-                me.playMode = 2;
-            });
-            //单曲循环
-            btn.singleCircular.addEventListener('click',function(){
-                addClass(this,'current');
-                removeClass(btn.listCircular,'current');
-                removeClass(btn.randomPlay,'current');
-                me.playMode = 3;
-            });*/
             //显示歌曲列表
             btn.playlist.addEventListener('click',function(){
                 if (hasClass(me.musicDom.listWrap,'show')) {
@@ -563,10 +549,10 @@
                 for( i ; i < len ; i ++){
                     var data = lyric[i];
                     var time = data["time"], text = data["content"].trim();
-                    text = text ? text : '--- smusic ---';
+                    text = text ? text : '              ';
                     tpl += '<li class="u-lyric f-toe" data-time="'+time+'">'+text+'</li>';
                 }
-                tpl && (tpl += '<li class="u-lyric">www.smohan.net</li>');
+                tpl && (tpl += '');
             }else{
                 tpl = '<li class="eof">暂无歌词...</li>';
             }
@@ -606,8 +592,6 @@
                      prev : $('.music-container .prev'),
                      next : $('.music-container .next'),
                      listCircular : $('.music-container .list-circular'),  ////列表循环
-                     //randomPlay : $('.music-container .mode'),  //随机循环
-                     //singleCircular : $('.music-container .mode'),  //单曲循环
                      singleWords : $(".music-container .Lyric-word"), //歌词
                      playlist : $('.music-container .Playlist')
                  }
