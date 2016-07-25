@@ -38,6 +38,18 @@ a {
 img {
 	border: 0 none;
 }
+.blue {
+	background: -webkit-linear-gradient(45deg,#3396b3,#60cdc9);
+	background: -moz-linear-gradient(45deg,#3396b3,#60cdc9);
+}
+.o {
+	background: -webkit-linear-gradient(45deg,#fb996a,#fd699b);
+	background: -moz-linear-gradient(45deg,#fb996a,#fd699b);
+}
+.purple {
+	background: -webkit-linear-gradient(45deg,#a2a9de,#d885e2);
+	background: -moz-linear-gradient(45deg,#a2a9de,#d885e2);
+}
 .f-toe {
 	overflow: hidden;
 	word-wrap: normal;

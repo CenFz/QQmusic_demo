@@ -41,6 +41,7 @@
             }
 
         });
+        
         //是否开启自动播放
         if (this.setting.autoPlay) {
             this.autoPlay();

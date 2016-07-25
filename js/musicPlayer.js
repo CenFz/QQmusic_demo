@@ -505,7 +505,7 @@
          * @param lyric
          * @returns {*}
          */
-         parseLyric : function (lyric) {
+        parseLyric : function (lyric) {
             if(!lyric) return lyric;
             var result = [];
             var cArr = lyric.split("[");
@@ -541,7 +541,7 @@
          * 渲染歌词
          * @param lyric
          */
-         renderLyric : function (lyric) {
+        renderLyric : function (lyric) {
             lyric = this.parseLyric(lyric);
             var me = this, dom = me.musicDom["lyricWrap"], tpl = "",len, i = 0;
             len = lyric ? lyric.length : 0;
@@ -596,7 +596,6 @@
                      playlist : $('.music-container .Playlist')
                  }
              };
-
              this.currentMusic = this.config.defaultIndex || 0;
              this.playMode = this.config.defaultMode || 1; //播放模式，默认列表循环
              this.lyricCache = {}; //缓存已加载的歌词文件

@@ -51,6 +51,9 @@
     background-color: #fff;
     border: 1px solid #ddd;
 }
+#main-info {
+    border: 0 none;
+}
 .left_area {
     width: 199px;
     border-right: 1px solid #ddd;
@@ -264,6 +267,9 @@
     top:10px;
     right: 10px;
 
+}
+.left_nav dd a {
+    cursor: pointer;
 }
 /*底部*/
 .left_footer  {
@@ -542,7 +548,8 @@
 .music_info {
     height: 275px;
 }
-.music_info h2 {
+.music_info h2,
+.u-main h2 {
     font-size: 14px;
     font-weight: lighter;
     display: block;
@@ -695,7 +702,8 @@
     color: #ccc;
 }
 /*专辑首发*/
-.music_Albums {
+.music_Albums,
+.u-createlist {
     width: 100%;
     height: 280px;
     background: -webkit-linear-gradient(top,#fafafa,white);
@@ -709,30 +717,33 @@
     top: 10px;
     right: 40px;
 }
-.Alb_title, .Pop_title {
+.Alb_title, .Pop_title, .u-createlist-title {
     height: 40px;
     line-height: 40px;
 }
-.Alb_content, .Pop_content {
+.Alb_content, .Pop_content, .u-createlist-content {
     overflow: hidden;
     margin: 10px 12.5px;
     width: 825px;
 }
 .Alb_list,
-.Pop_list {
+.Pop_list,
+.u-createlist-list {
     float: left;
     overflow: hidden;
     width: 825px;
 }
 .Alb_list li,
-.Pop_list li {
+.Pop_list li,
+.u-createlist-list li {
     width: 135px;
     margin: 0 12.5px;
     float: left;
 }
 
 .Alb_list img,
-.Pop_list img {
+.Pop_list img,
+.u-createlist-list img {
     width: 135px;
     height: 135px;
 }
@@ -740,7 +751,8 @@
     display: none;
 }
 .Alb_list li p ,
-.Pop_list li p{
+.Pop_list li p,
+.u-createlist-list li p {
     line-height: 20px;
     height: 20px;
     margin-top: 3px;
@@ -749,17 +761,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.Alb_list .Alb_name {
+.Alb_list .Alb_name,
+.u-createlist-list .u_name {
     height: 20px;
     line-height: 20px;
     font-size: 14px;
 }
 .Alb_list .Alb_name:hover,
 .Alb_list .Alb_singer:hover,
-.Pop_list .Singer_name:hover {
+.Pop_list .Singer_name:hover,
+.u-createlist-list .u_name:hover,
+.u-createlist-list .u_singer:hover {
     color: green;
 }
-.Alb_list .Alb_singer {
+.Alb_list .Alb_singer,
+.u-createlist-list .u_singer {
     height: 20px;
     line-height: 20px;
 }
@@ -1095,6 +1111,9 @@
     z-index: 6;
     visibility: hidden;
 }
+.login-cover.show {
+    visibility: visible;
+}
 .login-cover .welcome-top {
     height: 30px;
 }
@@ -1143,12 +1162,12 @@
 }
 .login-cover .welcome-btn {
     background-color: #fff;
-    font-size: 22px;
+    top: 289px;
     color: #3ac17e;
+    font-size: 22px;
     position: absolute;
-    bottom: 68px;
-    right: 21px;
-    visibility: hidden;
+    right: 25px;
+    //visibility: hidden;
 }
 .login-cover .welcome-btn.open {
     visibility: visible;
@@ -1171,4 +1190,144 @@
 }
 .login-text span:hover {
     color: #3ac17e;
+}
+/*user.html信息*/
+.u-page {
+    position: relative;
+    width: 850px;
+}
+.u-head {
+    height: 180px;
+    clear: both;
+}
+.u-head .u-img {
+    margin: 30px;
+    float: left;
+}
+.u-head .u-img,
+.u-img img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+.u-head .u-info {
+    width: 150px;
+    float: left;
+    margin-top: 40px;
+    position: relative;
+}
+.u-info h2 {
+    font-size: 25px;
+    font-weight: lighter;
+    float: left;
+}
+.u-info i {
+    width: 25px;
+    height: 25px;
+    background-size: 78px 2140px;
+    background-position: 0 0;
+    float: left;
+}
+.u-info .u-h {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.u-info .u-attention {
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+.u-info .u-fans {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+.u-info .u-homepage {
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+.u-bg {
+    background-image: url(../images/u-bg1.jpg);
+    height: 180px;
+    width: 100%;
+    opacity: .2;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.u-main {
+    height: 500px;
+    width: 850px;
+}
+.u-main .u-like {
+    height: 250px;
+    width: 850px;
+}
+.u-like .u-like-content {
+    margin: 30px;
+}
+.u-like-content .u-like-list {
+    position: relative;
+}
+.u-like-content .u-like-list li {
+    display: inline-block;
+    margin: 10px;
+    width: 215px;
+    height: 150px;
+}
+.u-like-content .u-like-list span {
+    display: block;
+}
+.op-3 {
+    height: 120px;
+    opacity: 0.3;
+    position: absolute;
+    top: 15px;
+    width: 215px;
+}
+.op-6 {
+    height: 135px;
+    opacity: 0.6;
+    position: absolute;
+    top: 7.5px;
+    width: 180px;
+}
+.op-3.blue {
+    left: 10px;
+}
+.op-6.blue {
+    left: 27.5px;
+}
+.op-3.o {
+    //left: 245px;
+}
+.op-6.o {
+    left: 265.5px;
+}
+.op-3.purple {
+    //left: 485px;
+}
+.op-6.purple {
+    left: 502.5px;
+}
+.u-like-song, .u-like-alb, .u-like-sl {
+    height: 150px;
+    width: 145px;
+    position: absolute;
+    top: 0;
+}
+.u-like-song.blue {
+    left: 45px;
+}
+.u-like-alb.o {
+    left: 282.5px;
+}
+.u-like-sl.purple {
+    left: 520px;
+}
+.u-main .u-createlist {
+    height: 250px;
 }

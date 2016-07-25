@@ -18,10 +18,10 @@
                 </h1>
             </div>
         </header>
-        <main id="main_page" class="music-container clearfix">
+        <main id="main_page" class="main_page music-container clearfix">
             <div class="left_area fl">
                 <div class="left_top">
-                    <a><img class="lhead" src="images/user-login1.png" alt="" /></a>
+                    <a><img class="lhead nologin" src="images/user-login1.png" /></a>
                     <div class="user_info clearfix">
                         <div class="bot"></div>
                         <div class="top"></div>
@@ -72,23 +72,23 @@
                         <span></span>
                         <a href="#" class="exit">退出账户</a>
                     </div>
-                    <p>登录QQ音乐</p>
+                    <p class="accountName">登录QQ音乐</p>
                     <i class="icon-img"></i>
                     <div class="slideLine"></div>
                 </div>
                 <div class="left_nav">
                     <dl class="navBox">
                         <dt>音乐馆</dt>
-                        <dd><a href="#" class="action"><i class="iconfont">&#xe651;</i> 精选</a></dd>
-                        <dd><a><i class="iconfont">&#xe687;</i> 排行</a></dd>
-                        <dd><a><i class="iconfont">&#xe62b;</i> 歌单</a></dd>
-                        <dd><a><i class="iconfont">&#xe948;</i> 电台</a></dd>
+                        <dd><a class="musicpage" title="music.html"><i class="iconfont">&#xe651;</i> 精选</a></dd>
+                        <dd><a class="rankingpage" title="ranking.html"><i class="iconfont">&#xe687;</i> 排行</a></dd>
+                        <dd><a class="songlistpage" title="songlist.html"><i class="iconfont">&#xe62b;</i> 歌单</a></dd>
+                        <dd><a class="stationpage" title="station.html"><i class="iconfont">&#xe948;</i> 电台</a></dd>
                     </dl>
                     <dl class="navBox">
                         <dt>我的音乐</dt>
-                        <dd><a><i class="iconfont">&#xe602;</i> 我喜欢</a></dd>
-                        <dd><a><i class="iconfont">&#xe618;</i> 下载歌曲</a></dd>
-                        <dd><a><i class="iconfont">&#xe700;</i> 历史播放</a></dd>
+                        <dd><a class="mylovepage" title="mylove.html"><i class="iconfont">&#xe602;</i> 我喜欢</a></dd>
+                        <dd><a class="downpage" title="down.html"><i class="iconfont">&#xe618;</i> 下载歌曲</a></dd>
+                        <dd><a class="historypage" title="history.html"><i class="iconfont">&#xe700;</i> 历史播放</a></dd>
                     </dl>
                     <dl class="navBox list_add">
                         <dt>创建的歌单<a class="add_songs icon-img"></a></dt>
@@ -132,322 +132,7 @@
                     </div>
                 </div>
                 <div class="right_main">
-                    <div class="ppt J_Poster" data-setting='{
-                                                    "width":800,
-                                                    "height":210,
-                                                    "posterWidth":525,
-                                                    "posterHeight":210,
-                                                    "scale":0.9,
-                                                    "autoPlay":true,
-                                                    "delay":1500,
-                                                    "speed":500,
-                                                    "vertcalAlign":"middle"}'>
-                        <a class="slide_prev" href="#"></a>
-                        <a class="slide_next" href="#"></a>
-                        <ul class="poster_list">
-                            <li class="poster_item"><a href="#"><img src="images/18396.jpg" width="100%" height="100%" alt="" /></a></li>
-                            <li class="poster_item"><a href="#"><img src="images/18682.jpg" width="100%" height="100%" alt="" /></a></li>
-                            <li class="poster_item"><a href="#"><img src="images/18731.jpg" width="100%" height="100%" alt="" /></a></li>
-                            <li class="poster_item"><a href="#"><img src="images/18743.jpg" width="100%" height="100%" alt="" /></a></li>
-                            <li class="poster_item"><a href="#"><img src="images/18749.jpg" width="100%" height="100%" alt="" /></a></li>
-                        </ul>
-                    </div>
-                    <div class="music_info clearfix">
-                        <div class="music_recommed">
-                            <h2>为你推荐</h2>
-                            <div class="recommend fl">
-                                <div class="re_img">
-                                    <a href="#"><img src="images/6.png" alt="" /></a>
-                                    <span>基于你最近爱听的歌</span>
-                                </div>
-                                <a href="#">个性电台</a>
-                            </div>
-                            <div class="recommend fl">
-                                <div class="re_img">
-                                    <a href="#"><img src="images/tj_1.jpg" alt="" /></a>
-                                    <span>角色（新曲＋精选）</span>
-                                </div>
-                                <a href="#">关智斌</a>
-                            </div>
-                            <div class="recommend fl">
-                                <div class="re_img">
-                                    <a href="#"><img src="images/tj_2.jpg" alt="" /></a>
-                                    <span>Recall</span>
-                                </div>
-                                <a href="#">怀疑变成叹息</a>
-                            </div>
-                            <div class="recommend fl">
-                                <div class="re_img">
-                                    <a href="#"><img src="images/tj_3.jpg" alt="" /></a>
-                                    <span>跨界歌王(第六期)</span>
-                                </div>
-                                <a href="#">生活不止眼前的苟且</a>
-                            </div>
-                            <div class="recommend fl">
-                                <div class="re_img">
-                                    <a href="#"><img src="images/tj_4.jpg" alt="" /></a>
-                                    <span>Highlight</span>
-                                </div>
-                                <a href="#">BEAST</a>
-                            </div>
-                        </div>
-                        <div class="new_singe clearfix">
-                            <dl class="newSing_title">
-                                <dt>新歌首发</dt>
-                                <dd><a href="#">内地</a></dd>
-                                <i>|</i><dd><a href="#">港台</a></dd>
-                                <i>|</i><dd><a href="#">欧美</a></dd>
-                                <i>|</i><dd><a href="#">韩国</a></dd>
-                                <i>|</i><dd><a href="#">日本</a></dd>
-                            </dl>
-                            <div class="newSing_main">
-                                <div class="newSing_nav">
-                                    <a href="javascript:;" name="script_btn" class="mod_play icon-img" title="播放全部">播放全部</a>
-                                    <a href="javascript:;" class="text_btn">播放全部</a>
-                                    <a href="javascript:;" class="prve_btn icon-img">回退</a>
-                                    <a href="javascript:;" class="next_btn icon-img">前进</a>
-                                </div>
-                                <ul class="newSing_info">
-                                    <li>
-                                        <a href="#"><img src="images/newsing.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>冲破</p>
-                                            <i></i>
-                                            <a href="#">谢霆锋</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing2.png" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>相爱恨早 (《致青春》电视剧片尾曲)</p>
-                                            <i></i>
-                                            <a href="#">那英</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing1.png" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>五环之歌 (Live)</p>
-                                            <i></i>
-                                            <a href="#">吴莫愁</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing3.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>七月第十二天</p>
-                                            <i></i>
-                                            <a href="#">季秋洋</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing4.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>单身情歌 (Live)</p>
-                                            <i></i>
-                                            <a href="#">小沈阳</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing5.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>还魂门 (《老九门》电视剧主题曲)</p>
-                                            <i></i>
-                                            <a href="#">胡彦斌</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing6.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>最差不过是孤独</p>
-                                            <i></i>
-                                            <a href="#">赖伟锋</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing7.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>我门 (《老九门》电视剧主题曲)</p>
-                                            <i></i>
-                                            <a href="#">陈伟霆</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/newsing8.jpg" alt="" /></a>
-                                        <div class="newSing_text">
-                                            <p>我好像在哪见过你</p>
-                                            <i></i>
-                                            <a href="#">薛之谦</a>
-                                            <label for="">遮罩</label>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="music_Albums clearfix">
-                            <div class="Alb_title">
-                                <h2>专辑首发</h2>
-                            </div>
-                            <div class="Alb_PrveNext">
-                                <a class="prve_btn icon-img" href="#">后退</a>
-                                <a class="next_btn icon-img" href="#">前进</a>
-                            </div>
-                            <div class="Alb_content">
-                                <ul class="Alb_list">
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/zj1.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">放逐</a></p>
-                                        <p><a class="Alb_singer" href="#">刘晓华</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/zj2.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">超音界</a></p>
-                                        <p><a class="Alb_singer" href="#">傅超华</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/zj3.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">Perspective (认知)</a></p>
-                                        <p><a class="Alb_singer" href="#">Lawson (罗森乐队)</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/zj4.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">Get Out</a></p>
-                                        <p><a class="Alb_singer" href="#">赵泳鑫</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/zj5.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">盖世英雄 第3期</a></p>
-                                        <p><a class="Alb_singer" href="#">盖世英雄</a></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="music_Albums clearfix">
-                            <div class="Alb_title">
-                                <h2>热门歌单</h2>
-                            </div>
-                            <div class="Alb_content">
-                                <ul class="Alb_list">
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/rm1.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">夏夜晚风中甜蜜飘散的老情歌</a></p>
-                                        <p><a class="Alb_singer" href="#">华纳音乐</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/rm2.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">民谣是生活的诗</a></p>
-                                        <p><a class="Alb_singer" href="#">-只傻瓜</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/rm3.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">穿越星辰：经典科幻魔幻电影原声合辑</a></p>
-                                        <p><a class="Alb_singer" href="#">Mr.C</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/rm4.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">『华语』从年少轻狂到内敛静默</a></p>
-                                        <p><a class="Alb_singer" href="#">安易灬</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Alb_poster_135">
-                                            <img src="images/rm5.jpg" alt="" />
-                                            <span class="icon_play"></span>
-                                        </a>
-                                        <p><a class="Alb_name" href="#">「感受大师级编曲」吴庆隆老师篇。</a></p>
-                                        <p><a class="Alb_singer" href="#">小行星。</a></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="Pop_singer clearfix">
-                            <div class="Pop_title">
-                                <h2>热门歌手</h2>
-                            </div>
-                            <div class="Pop_more">
-                                <a href="#" class="Pop_more_link">更多  &gt;</a>
-                            </div>
-                            <div class="Pop_content">
-                                <ul class="Pop_list">
-                                    <li>
-                                        <a href="#" class="Pop_poster_135">
-                                            <img src="images/hot1.jpg" alt="" />
-                                        </a>
-                                        <p>
-                                            <a href="#" class="Singer_name">BIGBANG (빅뱅)</a>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Pop_poster_135">
-                                            <img src="images/hot2.jpg" alt="" />
-                                        </a>
-                                        <p>
-                                            <a href="#" class="Singer_name">周杰伦</a>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Pop_poster_135">
-                                            <img src="images/hot3.jpg" alt="" />
-                                        </a>
-                                        <p>
-                                            <a href="#" class="Singer_name">林俊杰</a>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Pop_poster_135">
-                                            <img src="images/hot4.jpg" alt="" />
-                                        </a>
-                                        <p>
-                                            <a href="#" class="Singer_name">陈奕迅</a>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="Pop_poster_135">
-                                            <img src="images/hot5.jpg" alt="" />
-                                        </a>
-                                        <p>
-                                            <a href="#" class="Singer_name">薛之谦</a>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <iframe src="music.html" width="100%" height="100%" id="main-info"></iframe>
                 </div>
                 <div class="Song_details">
                     <!--<img src="images/newsing8.jpg" class="bgimg"></img>-->
@@ -534,10 +219,10 @@
                 <div class="login">
                     <br />
                     <p>
-                        <input type="text" name="qqOrPhone" placeholder="输入账号" required class="welcome-input">
+                        <input type="text" name="qqOrPhone" placeholder="输入账号" required class="welcome-input account">
                     </p>
                     <p>
-                        <input type="password" name="password" placeholder="输入密码" required class="welcome-input">
+                        <input type="password" name="password" placeholder="输入密码" required class="welcome-input passwd">
                     </p>
                     <button class="welcome-btn iconfont">&#xe691;</button>
                     <div class="login-text">
@@ -549,11 +234,10 @@
         </main>
         <script src="js/musicList.js" charset="utf-8"></script>
         <script src="js/musicPlayer.js" charset="utf-8"></script>
+        <script src="js/welcome.js" charset="utf-8"></script>
         <script>
-            $(function(){
-                //var carousel = new Carousel($("J_Poster").eq(0));
-	            Carousel.init($(".J_Poster"));
-            });
+
+            //播放器
             new SMusic({
                 musicList : musicList,
                 autoPlay : false,  //是否自动播放
@@ -562,6 +246,8 @@
                     console.log(obj);
                 }
             });
+            //整体
+            new Welcome();
         </script>
 
     </body>
