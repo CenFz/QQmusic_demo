@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>historypage</title>
+        <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/icon2/iconfont.css" media="screen" title="no title" charset="utf-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="m-main">
+            <div class="m-title">
+                <h2>播放历史</h2>
+                <span>共200首歌曲</span>
+            </div>
+            <div class="m-content">
+                <div class="play-all m-btn">
+                    <i class="iconfont">&#xe6d2;</i>
+                    <p>播放全部</p>
+                </div>
+                <div class="play-down m-btn">
+                    <i class="iconfont">&#xe890;</i>
+                    <p>下载</p>
+                </div>
+                <div class="play-more m-btn">
+                    <p>更多操作</p>
+                    <i class="iconfont">&#xe610;</i>
+                </div>
+                <div class="m-list">
+                    <div class="m-Header">
+                        <div class="m-play" id="one">
+                            <p class="m-song" id="two">就是现在(Live)</p>
+                        </div>
+                        <p class="m-singer">歌手</p>
+                        <p class="m-alb">专辑</p>
+                        <p class="m-time">时长</p>
+                    </div>
+                    <ul class="m-info">
+                        <li class="m-current">
+                            <div class="m-play" id="one">
+                                <p class="m-song" id="two">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                        <li>
+                            <div class="m-play" id="one">
+                                <p class="m-song" id="two">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                        <li>
+                            <div class="m-play" id="one">
+                                <p class="m-song" id="two">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                        <li>
+                            <div class="m-play" id="one">
+                                <p class="m-song" id="two">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                        <li>
+                            <div class="m-play" id="one">
+                                <p class="m-song" id="two">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                        <li>
+                            <div class="m-play" id="one">
+                                <p class="m-song" id="two">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                        <li>
+                            <div class="m-play">
+                                <p class="m-song">就是现在(Live)</p>
+                            </div>
+                            <p class="m-singer">刘雪婧</p>
+                            <p class="m-alb">中国新歌声 第二期</p>
+                            <p class="m-time">03:34</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/station.js" charset="utf-8"></script>
+        <script type="text/javascript">
+        (function() {
+            [].slice.call(document.querySelectorAll('.m-list')).forEach(function(el) {
+                new stationTabs(el);
+            })
+        })();
+
+        </script>
+    </body>
+</html>

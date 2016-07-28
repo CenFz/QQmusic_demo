@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>mylike</title>
+        <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/icon/iconfont.css" media="screen" title="no title" charset="utf-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="m-main">
+            <div class="m-title">
+                <h2>我喜欢</h2>
+            </div>
+            <div class="tabs">
+                <nav>
+                    <ul>
+                        <li class="tab-current">
+                            <a href="#section-fillup-1" ><span>歌曲(3)</span></a>
+                        </li>
+                        <li>
+                            <a href="#section-fillup-2"><span>专辑(0)</span></a>
+                        </li>
+                        <li>
+                            <a href="#section-fillup-3"><span>歌单(0)</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="content-wrap">
+                    <section id="section-underline-1" class=""><p>1</p></section>
+                    <section id="section-underline-2" class=""><p>2</p></section>
+                    <section id="section-underline-3" class=""><p>3</p></section>
+                </div>
+            </div>
+        </div>
+        <script src="js/station.js" charset="utf-8"></script>
+        <script type="text/javascript">
+        (function() {
+            [].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+                new stationTabs(el);
+            })
+        })();
+
+        </script>
+    </body>
+</html>

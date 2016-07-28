@@ -9,7 +9,7 @@
 }
 
 /*通用*/
-html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, label, th, td, a, img {
+html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, label, th, td, a, img, span {
     margin: 0;
     padding: 0;
     border: 0;
@@ -38,6 +38,7 @@ a {
 img {
 	border: 0 none;
 }
+
 .blue {
 	background: -webkit-linear-gradient(45deg,#3396b3,#60cdc9);
 	background: -moz-linear-gradient(45deg,#3396b3,#60cdc9);
@@ -90,7 +91,6 @@ img {
 }
 .mgc:focus {
   outline: none;
-  //box-shadow: inset 0 1px 1px rgba(255,255,255,0.075), 0 0px 2px #38a7ff;
 }
 .mgc:checked {
   background-color: #fff;
