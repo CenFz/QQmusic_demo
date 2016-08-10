@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <title>mylike</title>
         <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/icon/iconfont.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/icon2/iconfont.css" media="screen" title="no title" charset="utf-8">
         <script type="text/javascript" src="js/jquery.js"></script>
     </head>
     <body>
-        <div class="m-main">
+        <div class="m-main" id="myLikePage">
             <div class="m-title">
                 <h2>我喜欢</h2>
             </div>
@@ -27,13 +27,57 @@
                     </ul>
                 </nav>
                 <div class="content-wrap">
-                    <section id="section-underline-1" class=""><p>1</p></section>
+                    <section id="section-underline-1" class="">
+                        <div class="m-content">
+                            <div class="play-all m-btn">
+                                <i class="iconfont">&#xe6d2;</i>
+                                <p>播放全部</p>
+                            </div>
+                            <div class="play-down m-btn">
+                                <i class="iconfont">&#xe890;</i>
+                                <p>下载</p>
+                            </div>
+                            <div class="play-more m-btn">
+                                <p>更多操作</p>
+                                <i class="iconfont">&#xe610;</i>
+                            </div>
+                            <div class="i-list">
+                                <div class="i-Header">
+                                    <p class="i-song">歌曲</p>
+                                    <p class="i-singer">歌手</p>
+                                    <p class="i-alb">专辑</p>
+                                    <p class="i-time">时长</p>
+                                </div>
+                                <ul class="i-info">
+                                    <li class="i-current">
+                                        <p class="i-song">就是现在(Live)</p>
+                                        <p class="i-singer">刘雪婧</p>
+                                        <p class="i-alb">中国新歌声 第二期</p>
+                                        <p class="i-time">03:34</p>
+                                    </li>
+                                    <li class="">
+                                        <p class="i-song">双刀(Live)</p>
+                                        <p class="i-singer">李瑞轩</p>
+                                        <p class="i-alb">中国新歌声 第四期</p>
+                                        <p class="i-time">03:34</p>
+                                    </li>
+                                    <li class="">
+                                        <p class="i-song">是你</p>
+                                        <p class="i-singer">TFBOYS</p>
+                                        <p class="i-alb">是你</p>
+                                        <p class="i-time">03:34</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                     <section id="section-underline-2" class=""><p>2</p></section>
                     <section id="section-underline-3" class=""><p>3</p></section>
                 </div>
             </div>
         </div>
         <script src="js/station.js" charset="utf-8"></script>
+        <script src="js/welcome.js" charset="utf-8"></script>
         <script type="text/javascript">
         (function() {
             [].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {

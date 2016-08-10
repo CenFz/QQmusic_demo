@@ -1,29 +1,16 @@
 (function() {
-    /*
-    添加样式
-    @param element
-    @param className
-    */
+
     function addClass(element,className) {
         if (hasClass(element,className) == false) {
             element.className += " "+className;
         }
     }
-    /*
-    是否包含样式
-    @param element
-    @param className
-    @returns {boolean}
-    */
+
     function hasClass(element,className) {
         return !!element.className.match(new RegExp('(\\s|^)'+className+'(\\s|$)'));
         //return !!(className in element.className);
     }
-    /*
-    移除样式
-    @param element
-    @param className
-    */
+
     function removeClass(element,className) {
         var currentClass = element.className;
         if (hasClass(element,className)) {
@@ -32,11 +19,7 @@
             element.className = currentClass;
         }
     }
-    /*
-    自动添加或删除样式（自动切换）
-    @param element
-    @param className
-    */
+
     function toggleClass(element,className) {
         if(hasClass(element,className)) {
             removeClass(element,className);
@@ -44,20 +27,11 @@
             addClass(element,className);
         }
     }
-    /*
-    返回元素节点
-    @param element
-    @returns {HTMLElement}
-    */
+
     function $(element) {
         return document.querySelector(element);
     }
-    /*
-    对象扩展
-    @param target
-    @param source
-    @returns {object}
-    */
+
     function extend(targer,source) {
         for (var p in source) {
             if (source.hasOwnProperty(p)) {
@@ -74,7 +48,6 @@
     }
     welcome.prototype = {
         /*弹出登录框*/
-
         getLoginPage : function() {
             var me = this.page;
             if (hasClass(me.portrait,'nologin')) {
@@ -103,13 +76,33 @@
                 console.log(accountName);
                 accountName.innerHTML = user;
                 this.outLoginPage();
+                console.log(me.listAdd);
+                me.listAdd.style.display = 'block';
+                me.collectSong.style.display = 'block';
             } else {
                 //登录失败
                 alert("账号或密码错误");
             }
         },
+        //退出
+        userExit : function() {
+            var me = this.page;
+            removeClass(me.portrait, 'login');
+            me.portrait.src="images/user-login1.png";
+            var accountName = $('.accountName');
+            accountName.textContent = '';
+            addClass(me.portrait, 'nologin');
+            me.listAdd.style.display = 'none';
+            me.collectSong.style.display = 'none';
+        },
+        //我喜欢
+        myLike : function() {
+
+        },
+        //一些操作
         action : function() {
-            var me = this; b = this.page.btn; nt = this.page.nodetext; c = this.page.cutover;
+            var me = this, b = this.page.btn, nt = this.page.nodetext, c = this.page.cutover;
+            var timer = null;
             //登录界面
             this.page.portrait.addEventListener('click',function(){
                 me.getLoginPage();
@@ -126,15 +119,17 @@
             })
             //出现用户信息
             me.page.portrait.addEventListener('mouseover', function() {
-                //console.log('111111');
                 if (hasClass(me.page.portrait,'login')) {
                     addClass(me.page.userinfo,'show');
+                    clearTimeout(timer);
                 }
             })
             //隐藏用户信息
             me.page.portrait.addEventListener('mouseout', function(){
                 if (hasClass(me.page.portrait,'login')) {
-                    removeClass(me.page.userinfo,'show');
+                    timer = setTimeout(function() {
+                        removeClass(me.page.userinfo,'show');
+                    },2000);
                 }
             })
             me.page.portrait.addEventListener('click',function(){
@@ -143,6 +138,14 @@
 
                 }
             })
+
+            b.homepage.addEventListener('click', function() {
+                me.page.ifrpage.src = "user.html";
+            },false);
+            //退出用户
+            b.exitUser.addEventListener('click', function() {
+                me.userExit()
+            },false);
         },
         options : {
             start : 0
@@ -178,6 +181,8 @@
                 userinfo : $('.main_page .user_info'),
                 ifrpage : $('.main_page #main-info'),
                 tabs : [].slice.call($('.main_page .left_nav').querySelectorAll('dl > dd > a')),  //tabs elems
+                listAdd : $('.main_page  .list_add'),
+                collectSong : $('.main_page  .collectSong'),
                 cutover : {
                     musicpage : $('.main_page .musicpage'),
                     rankingpage : $('.main_page .rankingpage'),
@@ -193,7 +198,9 @@
                 },
                 btn : {
                     outlogin : $(".main_page .close_bg"),
-                    loginbtn : $('.main_page .welcome-btn')
+                    loginbtn : $('.main_page .welcome-btn'),
+                    homepage : $('.main_page .home'),
+                    exitUser : $('.main_page .exit')
                 }
             };
             this.current = -1;

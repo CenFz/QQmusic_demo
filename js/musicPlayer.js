@@ -127,6 +127,7 @@
     */
     function SmMusic(config) {
         var defaults = this.config;
+        console.log(defaults);
         this.config = extend(defaults,config);
         this.musicList = this.config.musicList || [];
         this.musicLength = this.musicList.length;
@@ -269,8 +270,6 @@
             removeClass(ctrl,'paused');
             addClass(ctrl,'play');
             ctrl.setAttribute('title','暂停');
-            //removeClass(this.musicDom.cover,'paused');
-            //addClass(this.musicDom.cover,'play');
         },
         //暂停
         pause : function() {
@@ -279,8 +278,6 @@
             removeClass(ctrl,'play');
             addClass(ctrl,'paused');
             ctrl.setAttribute('title','播放');
-            //removeClass(this.musicDom.cover,'play');
-            //addClass(this.musicDom.cover,'paused');
         },
         /*//获取不包含当前索引的随机索引*/
         getRandomIndex : function(){

@@ -106,10 +106,10 @@
     top: 88px;
     left: -42px;
     z-index: 20;
-    visibility: hidden;
+    display: none;
 }
 .left_top .user_info.show {
-    visibility: visible;
+    display: block;;
 }
 .user_info .bot,
 .user_info .top {
@@ -255,6 +255,10 @@
 }
 .left_nav .list_add {
     position: relative;
+    display: none;
+}
+.left_nav .collectSong {
+    display: none;
 }
 .left_nav .list_add .add_songs {
     height: 15px;
@@ -572,6 +576,36 @@
     background-color: #f1f1f1;
     padding-left: 5px;
 
+}
+.recommend {
+    position: relative;
+}
+.re_player {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 135px;
+    height: 135px;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.re_player:hover,
+.re_player.hover {
+    display: block;
+}
+.re_player .re_player_btn  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/icon.png);
+    background-position: 0 -539px;
+    background-size: 40px 1096px;
 }
 .recommend .re_img a {
     text-decoration: none;
@@ -1596,12 +1630,12 @@
     top: 0;
     left: 0;
 }
-.content-wrap section p {
+/*.content-wrap section p {
     color: rgba(40, 44, 42, 0.05);
     font-weight: 900;
     font-size: 4em;
     line-height: 1;
-}
+}*/
 .content-wrap section.content-current {
     visibility: visible;
 }
@@ -1648,6 +1682,17 @@
     top: 10px;
     left: 20px;
 }
+.m-content .play-all p,
+.m-content .play-down p,
+.m-content .play-more p {
+    color: #fff;
+    font: 12px/25px Arial,Tahoma;
+    text-align: center;
+}
+.m-content .play-down p,
+.m-content .play-more p {
+    color: #000;
+}
 .play-all i {
     position: absolute;
     top: 0;
@@ -1685,14 +1730,19 @@
     top: 0;
     left: 75px;
 }
-.m-list {
-    overflow: auto;
+.m-list,
+.i-list {
+
     height: 550px;
     width: 100%;
     position: absolute;
     top: 50px;
 }
-.m-Header, .m-info{
+.m-list {
+    overflow: auto;
+}
+.m-Header, .m-info,
+.i-Header, .i-info {
     width: 810px;
     height: 40px;
     line-height: 40px;
@@ -1700,24 +1750,32 @@
     background-color: #f2f2f2;
     clear: both;
 }
-.m-info {
+.m-info,
+.i-info {
     background-color: #fff;
+    height: 40px;
 }
-.m-info li {
+.m-info li,
+.i-info li {
     position: relative;
 }
 .m-Header p,
-.m-info p {
+.m-info p,
+.i-Header p,
+.i-info p {
     //float: left;
     color: #666;
     cursor: pointer;
     position: relative;
 }
-.m-info li {
+.m-info li,
+.i-info li {
     height: 40px;
 }
 .m-Header .m-song,
-.m-info .m-song {
+.m-info .m-song,
+.i-Header .i-song,
+.i-info .i-song  {
     position: absolute;
     top: 0;
     left: 0;
@@ -1727,43 +1785,70 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.m-Header .m-song {
+.i-Header .i-song,
+.i-info .i-song,
+.i-Header .i-singer,
+.i-info .i-singer,
+.i-Header .i-alb,
+.i-info .i-alb,
+.i-Header .i-time,
+.i-info .i-time {
+    text-align: left;
+}
+.m-content .i-list .i-Header .i-song {
     margin-left: 40px;
 }
-.m-info .m-play i {
+.m-content .i-list .i-Header p {
+    margin-left: 20px;
+}
+.m-info .m-play i{
     position: relative;
     top: 0;
     left: 200px;
 }
 .m-Header .m-singer,
-.m-info .m-singer {
+.m-info .m-singer,
+.i-Header .i-singer,
+.i-info .i-singer {
     position: absolute;
     top: 0;
     left: 300px;
     width: 200px;
 }
-.m-Header .m-singer {
-    margin-left: 20px;
-}
+
 .m-Header .m-alb,
-.m-info .m-alb {
+.m-info .m-alb,
+.i-Header .i-alb,
+.i-info .i-alb {
     position: absolute;
     top: 0;
     left: 500px;
     width: 200px;
 }
-.m-Header .m-alb {
-    margin-left: 20px;
-}
+
 .m-Header .m-time,
-.m-info .m-time {
+.m-info .m-time,
+.i-Header .i-time,
+.i-info .i-time {
     position: absolute;
     top: 0;
     left: 700px;
 }
-.m-Header .m-time {
-    margin-left: 20px;
+.i-Header .i-time,
+.i-info .i-time {
+    width: 130px;
 }
-.m-current P {
+
+.i-current P {
     color: #2CC185;
+}
+
+.i-info li .player {
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+.i-info li .player i {
+    padding-right: 5px;
+    cursor: pointer;
 }

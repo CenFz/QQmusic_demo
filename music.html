@@ -9,7 +9,7 @@
         <script type="text/javascript" src="js/carousel.js"></script>
     </head>
     <body>
-        <div class="ppt J_Poster" data-setting='{
+        <div id="musicPage" class="ppt J_Poster" data-setting='{
                                         "width":800,
                                         "height":210,
                                         "posterWidth":525,
@@ -37,12 +37,18 @@
                         <a href="#"><img src="images/6.png" alt="" /></a>
                         <span>基于你最近爱听的歌</span>
                     </div>
+                    <div class="re_player">
+                        <span class="re_player_btn"></span>
+                    </div>
                     <a href="#">个性电台</a>
                 </div>
                 <div class="recommend fl">
                     <div class="re_img">
                         <a href="#"><img src="images/tj_1.jpg" alt="" /></a>
                         <span>角色（新曲＋精选）</span>
+                    </div>
+                    <div class="re_player">
+                        <span class="re_player_btn"></span>
                     </div>
                     <a href="#">关智斌</a>
                 </div>
@@ -51,6 +57,9 @@
                         <a href="#"><img src="images/tj_2.jpg" alt="" /></a>
                         <span>Recall</span>
                     </div>
+                    <div class="re_player">
+                        <span class="re_player_btn"></span>
+                    </div>
                     <a href="#">怀疑变成叹息</a>
                 </div>
                 <div class="recommend fl">
@@ -58,12 +67,18 @@
                         <a href="#"><img src="images/tj_3.jpg" alt="" /></a>
                         <span>跨界歌王(第六期)</span>
                     </div>
+                    <div class="re_player">
+                        <span class="re_player_btn"></span>
+                    </div>
                     <a href="#">生活不止眼前的苟且</a>
                 </div>
                 <div class="recommend fl">
                     <div class="re_img">
                         <a href="#"><img src="images/tj_4.jpg" alt="" /></a>
                         <span>Highlight</span>
+                    </div>
+                    <div class="re_player">
+                        <span class="re_player_btn"></span>
                     </div>
                     <a href="#">BEAST</a>
                 </div>
@@ -183,7 +198,9 @@
                         <li>
                             <a href="#" class="Alb_poster_135">
                                 <img src="images/zj1.jpg" alt="" />
-                                <span class="icon_play"></span>
+                                <div class="re_player">
+                                    <span class="re_player_btn"></span>
+                                </div>
                             </a>
                             <p><a class="Alb_name" href="#">放逐</a></p>
                             <p><a class="Alb_singer" href="#">刘晓华</a></p>
@@ -191,7 +208,9 @@
                         <li>
                             <a href="#" class="Alb_poster_135">
                                 <img src="images/zj2.jpg" alt="" />
-                                <span class="icon_play"></span>
+                                <div class="re_player">
+                                    <span class="re_player_btn"></span>
+                                </div>
                             </a>
                             <p><a class="Alb_name" href="#">超音界</a></p>
                             <p><a class="Alb_singer" href="#">傅超华</a></p>
@@ -199,7 +218,9 @@
                         <li>
                             <a href="#" class="Alb_poster_135">
                                 <img src="images/zj3.jpg" alt="" />
-                                <span class="icon_play"></span>
+                                <div class="re_player">
+                                    <span class="re_player_btn"></span>
+                                </div>
                             </a>
                             <p><a class="Alb_name" href="#">Perspective (认知)</a></p>
                             <p><a class="Alb_singer" href="#">Lawson (罗森乐队)</a></p>
@@ -207,7 +228,9 @@
                         <li>
                             <a href="#" class="Alb_poster_135">
                                 <img src="images/zj4.jpg" alt="" />
-                                <span class="icon_play"></span>
+                                <div class="re_player">
+                                    <span class="re_player_btn"></span>
+                                </div>
                             </a>
                             <p><a class="Alb_name" href="#">Get Out</a></p>
                             <p><a class="Alb_singer" href="#">赵泳鑫</a></p>
@@ -215,7 +238,9 @@
                         <li>
                             <a href="#" class="Alb_poster_135">
                                 <img src="images/zj5.jpg" alt="" />
-                                <span class="icon_play"></span>
+                                <div class="re_player">
+                                    <span class="re_player_btn"></span>
+                                </div>
                             </a>
                             <p><a class="Alb_name" href="#">盖世英雄 第3期</a></p>
                             <p><a class="Alb_singer" href="#">盖世英雄</a></p>
@@ -325,12 +350,14 @@
                 </div>
             </div>
         </div>
+        <script src="js/station.js"></script>
         <script type="text/javascript">
             //幻灯片轮播
             $(function(){
                 //var carousel = new Carousel($("J_Poster").eq(0));
                 Carousel.init($(".J_Poster"));
             });
+            new stationTabs();
         </script>
     </body>
 </html>
